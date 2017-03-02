@@ -7,11 +7,11 @@ function Grade() {
 }
 
 Grade.prototype = {
-    constructor : Grade,
-    addGrade : function(newGrade) {
+    constructor: Grade,
+    addGrade: function(newGrade) {
         this.grades.push(newGrade);
     },
-    average : function() {
+    average: function() {
         var grades = this.grades;
         var total = 0;
         for (var i=0; i<grades.length; i++) {

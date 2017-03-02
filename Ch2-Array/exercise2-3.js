@@ -8,15 +8,15 @@ function MonthData() {
 }
 
 MonthData.prototype = {
-    constructor : MonthData,
-    addWeekly : function() {
+    constructor: MonthData,
+    addWeekly: function() {
         var weekData = [];
         for (var i=0; i<arguments.length; i++) {
             weekData.push(arguments[i]);
         }
         this.dataStore.push(weekData);
     },
-    aveMonth : function() {
+    aveMonth: function() {
         var data = this.dataStore;
         var total = 0,
             count = 0;
@@ -29,7 +29,7 @@ MonthData.prototype = {
         var average = (total / count).toFixed(2);
         console.log('average of month: ' + average);
     },
-    aveOneWeek : function(index) {
+    aveOneWeek: function(index) {
         var data = this.dataStore[index - 1];
         var total = 0;
         for (var i=0; i<data.length; i++) {
@@ -38,7 +38,7 @@ MonthData.prototype = {
         var average = (total / data.length).toFixed(2);
         console.log('average of week ' + index + ': ' + average);
     },
-    aveEveryWeek : function() {
+    aveEveryWeek: function() {
         console.log('=== average of all weeks ===');
         for (var i=0; i<this.dataStore.length; i++) {
             this.aveOneWeek(i + 1);

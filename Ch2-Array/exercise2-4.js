@@ -10,8 +10,8 @@ function ToWord() {
 }
 
 ToWord.prototype = {
-    constructor : ToWord,
-    toWord : function() {
+    constructor: ToWord,
+    toWord: function() {
         var word = this.chars.join('');
         console.log('the word is: ' + word);
     }
