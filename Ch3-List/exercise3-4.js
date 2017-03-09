@@ -26,12 +26,12 @@ function showMovies(list) {
     }
 }
 
-function checkout(movieList, line) {
-    if (movieList.search(line) === -1) {
+function checkout(available, rent, line) {
+    if (available.search(line) === -1) {
         console.log('[info] ' + line + ' is not available');
     } else {
-        rentList.append(line);
-        movieList.remove(line);
+        rent.append(line);
+        available.remove(line);
         console.log('[info] ' + line + ' is available');
     }
 }
@@ -46,7 +46,7 @@ rl.on('line', function(line) {
         rl.close();
         return;
     }
-    checkout(movieList, line);
+    checkout(movieList, rentList, line);
     console.info('===== movies now rented out =====');
     showMovies(rentList);
     console.info('===== movies now available =====');
