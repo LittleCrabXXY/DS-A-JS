@@ -18,10 +18,9 @@ List.prototype = {
         if (typeof index !== 'number' || index < 0) {
             console.error('[err] List.insert(): invalid arg 1');
             return false;
-        } else {
-            this.values.splice(index, 0, value);
-            return true;
         }
+        this.values.splice(index, 0, value);
+        return true;
     },
     remove: function(value) {
         var index = this.search(value);
