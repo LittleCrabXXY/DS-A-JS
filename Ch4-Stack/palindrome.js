@@ -3,8 +3,17 @@
 var Stack = require('./Stack.js');
 
 function isPalindrome(str) {
+    var reverseStr = '';
+    // reverseStr = str.split('').reverse().join('');   // 不使用栈
+    /* 使用栈 - 以下 */
     var stackIns = new Stack();
-    var reverseStr = str.split('').reverse().join('');
+    for (var i=0; i<str.length; i++) {
+        stackIns.push(str.charAt(i));
+    }
+    while (stackIns.peek()) {
+        reverseStr += stackIns.pop();
+    }
+    /* 使用栈 - 以上*/
     if (reverseStr === str) {
         return true;
     } else {
