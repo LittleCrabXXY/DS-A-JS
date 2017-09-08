@@ -28,5 +28,5 @@ PriorityQueue.prototype.deQueue = function() {
             index = i;
         }
     }
-    return this.values.splice(index, 1);
+    return this.values.splice(index, 1)[0] || null;
 };
