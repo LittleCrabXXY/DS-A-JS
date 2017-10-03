@@ -1,4 +1,4 @@
-// 双向链表的实现
+// 双向链表的实现 DoublesideLinkedList
 
 module.exports = DLinkedList;
 
