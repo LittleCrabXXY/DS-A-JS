@@ -1,3 +1,2 @@
 .eslintrc.json
-jsconfig.json
-typings/*
+node_modules
